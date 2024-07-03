@@ -1,0 +1,39 @@
+<div class="movie-details-container">
+
+
+    
+    <div class="movie-header">
+        <a [routerLink]="['/']" class="back-link">Back to Movie List</a>
+        <h1 class="title">{{ md.title }}</h1>
+        <p class="tagline">{{ md.tagline }}</p>
+    </div>
+    <div class="movie-content">
+        <div class="poster">
+            <img [src]="'https://image.tmdb.org/t/p/original/' + md.poster_path" alt="Poster Image">
+        </div>
+        <div class="details">
+            <p><strong>Overview:</strong> {{ md.overview }}</p>
+            <p><strong>Genres:</strong>
+                <span *ngFor="let genre of md.genres; ; let last = last">
+                    {{ genre.name }}<span *ngIf="!last">, </span>
+                </span>
+            </p>
+            <p><strong>Release Date:</strong> {{ md.release_date }}</p>
+            <p><strong>Runtime:</strong> {{ md.runtime }} minutes</p>
+            <p><strong>Vote Average:</strong> {{ md.vote_average }}</p>
+            <p><strong>Vote Count:</strong> {{ md.vote_count }}</p>
+            <p><strong>Production Companies:</strong>
+                <span *ngFor="let company of md.production_companies; let last = last">
+                    {{ company.name }}<span *ngIf="!last">, </span>
+                </span>
+            </p>
+            <p><strong>Production Countries:</strong>
+                <span *ngFor="let country of md.production_countries; let last = last">
+                    {{ country.name }}<span *ngIf="!last">, </span>
+                </span>
+            </p>
+
+        </div>
+
+    </div>
+</div>

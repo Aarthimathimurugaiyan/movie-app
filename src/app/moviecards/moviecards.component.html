@@ -1,0 +1,16 @@
+<!-- src/app/movie-listing/movie-listing.component.html -->
+<section class="listing">
+    <!-- <n -->
+
+    <!-- no data movie shoe no data -->
+
+    <img class="listing-photo" [src]="'https://image.tmdb.org/t/p/w500' + movie.backdrop_path" crossorigin="anonymous"
+        alt="Movie Poster" />
+    <div class="details">
+        <h2 class="title">{{movie.original_title}}</h2>
+        <p class="date">{{movie.release_date}}</p>
+        <p class="overview">{{movie.overview}}</p>
+    </div>
+
+<a [routerLink]="['/movie', movie.id]">click here</a>
+</section>

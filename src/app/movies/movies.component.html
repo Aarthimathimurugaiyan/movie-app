@@ -1,0 +1,17 @@
+<section>
+    <form>
+        <div class="search_bar">
+            <input type="text" placeholder="Search" #filter />
+            <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
+            <!-- (click)="filterResults(filter.value) -->
+        </div>
+    </form>
+
+</section>
+<section class="results">
+
+    <!-- <div *ngIf="filteredMovies.length === 0">
+        <h2>No data</h2>
+    </div> -->
+    <app-moviecards *ngFor="let movie of filterdata " [movie]="movie"></app-moviecards>
+</section>
