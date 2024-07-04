@@ -19,7 +19,7 @@
   .listing-location::before {
     content: url("/assets/location-pin.svg") / "";
   }
-  section.listing a {
+  /* section.listing a {
     padding-left: 20px;
     text-decoration: none;
     color: var(--primary-color);
@@ -27,7 +27,7 @@
   section.listing a::after {
     content: "\203A";
     margin-left: 5px;
-  }
+  } */
 
 
   /* src/app/movie-listing/movie-listing.component.css */
@@ -59,4 +59,18 @@
   .overview {
     margin-top: 16px;
     white-space: pre-wrap;
+  }
+
+  .back-link {
+    color: blue;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    content: "\203A";
+  }
+  
+  .back-button:hover {
+    background-color: #e67e22;
   }

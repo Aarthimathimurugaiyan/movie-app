@@ -12,3 +12,4 @@ import { MoviesComponent } from './movies/movies.component';
 export class AppComponent {
   title = 'movies';
 }
+

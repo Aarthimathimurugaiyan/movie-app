@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { Movielistdata } from '../movielistdata';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { Movielistdata } from '../moviedetailsdata';
 
 @Component({
   selector: 'app-moviecards',
